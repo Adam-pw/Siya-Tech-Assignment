@@ -1,44 +1,85 @@
 ### Submitted By : Adam Pithenwala
 
-* To run the website first install all the packages `npm install`
-* Then start the server through `npm start`
+- To run the website first install all the packages `npm install`
+- Then start the server through `npm start`
 
+Visit the hosted website from here `https://siya-tech-assignment.vercel.app/`
 And you can also see the Github Repository form here `https://github.com/Adam-pw/Siya-Tech-Assignment.git`
 
 ### Note :
-* The data provided for the assignment was incomplete and lacked proper refinement. As a result, I created my own metadata to make sense of the available information. However, the code I wrote may contain some redundancy that could be eliminated if more refined data with proper IDs for each section and consistent formatting will be provided.
 
-
+- The data provided for the assignment was incomplete and lacked proper refinement. As a result, I created my own metadata to make sense of the available information. However, the code I wrote may contain some redundancy that could be eliminated if more refined data with proper IDs for each section and consistent formatting will be provided.
 
 <hr>
 ## Assignment: Expandable Table
 Your task is to create an expandable table component in React that allows users to compress rows based on a given time period (e.g. month, quarter, year) and view the aggregated data.
 
 Requirements:
+
 1. Your component should accept an array of data objects with properties representing the time period (e.g. month, quarter, year) and other relevant data.
-Example data:
+   Example data:
 
 ```json
 [
-    { "month": "January", "indicators":[{"name":"revenue","value": 10000},{"name":"expenses","value": 8000}] },
-    { "month": "February",  "indicators":[{"name":"revenue","value": 12000},{"name":"expenses","value": 10000}]  },
-    { "month": "March", "indicators":[{"name":"revenue","value": 9000},{"name":"expenses","value": 7000}]   },
-    { "month": "April", "indicators":[{"name":"revenue","value": 11000},{"name":"expenses","value": 9000}]   },
-    { "month": "May", "indicators":[{"name":"revenue","value": 8000},{"name":"expenses","value": 6000}]   },
-    { "month": "June",  "indicators":[{"name":"revenue","value": 14000},{"name":"expenses","value": 12000}]  }
+  {
+    "month": "January",
+    "indicators": [
+      { "name": "revenue", "value": 10000 },
+      { "name": "expenses", "value": 8000 }
+    ]
+  },
+  {
+    "month": "February",
+    "indicators": [
+      { "name": "revenue", "value": 12000 },
+      { "name": "expenses", "value": 10000 }
+    ]
+  },
+  {
+    "month": "March",
+    "indicators": [
+      { "name": "revenue", "value": 9000 },
+      { "name": "expenses", "value": 7000 }
+    ]
+  },
+  {
+    "month": "April",
+    "indicators": [
+      { "name": "revenue", "value": 11000 },
+      { "name": "expenses", "value": 9000 }
+    ]
+  },
+  {
+    "month": "May",
+    "indicators": [
+      { "name": "revenue", "value": 8000 },
+      { "name": "expenses", "value": 6000 }
+    ]
+  },
+  {
+    "month": "June",
+    "indicators": [
+      { "name": "revenue", "value": 14000 },
+      { "name": "expenses", "value": 12000 }
+    ]
+  }
 ]
 ```
+
 2. Your table should display the data in a tabular format with columns representing the time period and relevant data properties.
-Example table:
-~
+   Example table:
+   ~
+
 ```yaml
 |	     |January|February|March| April|May  | June  |
 |Revenue | 	10000|	12000 |	9000| 11000|8000 |	14000|
 |Expenses|	8000 |	10000 |	7000| 9000 |6000 |	12000|
 ```
+
 3. Your table should allow users to click on a given time period (e.g. month) to compress the table and display aggregated data (e.g. quarterly or yearly).
 
 Example compressed table (by quarter):
+
 ```yaml
 |	     |   Q1  |  Q2    |
 |Revenue | 	31000|	25000 |
@@ -48,15 +89,18 @@ Example compressed table (by quarter):
 4. Your table should allow users to click on the compressed data to expand the table back to the original format.
 
 Bonus:
-* Allow users to customize the time period used for compression (e.g. month, quarter, year).
-* Add animations to the expansion and compression of the table.
+
+- Allow users to customize the time period used for compression (e.g. month, quarter, year).
+- Add animations to the expansion and compression of the table.
 
 Points considered while scoring.
+
 1. Mobile responsiveness
 2. Code structure.
 3. Total no. of points covered from the above requirements
 
 Solve the challenge using react libraries
+
 1. react-core
 2. chakra-ui (https://chakra-ui.com/getting-started)
 
