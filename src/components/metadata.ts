@@ -124,5 +124,4 @@ const Q4 = [
     ],
   },
 ];
-
 export { data, Q1, Q2, Q3, Q4 };

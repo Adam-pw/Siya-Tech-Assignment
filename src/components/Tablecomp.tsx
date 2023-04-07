@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import "./Tablecomp.css";
 import { data, Q1, Q2, Q3, Q4 } from "./metadata";
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 const Tablecomp = () => {
   const [click, setClick] = useState(false);
@@ -18,17 +19,21 @@ const Tablecomp = () => {
   const handleClick = (value: string) => {
     setId(value);
     setClick(!click);
-    if (value === "Q1") {
-      setSubdata(Q1);
-    }
-    if (value === "Q2") {
-      setSubdata(Q2);
-    }
-    if (value === "Q3") {
-      setSubdata(Q3);
-    }
-    if (value === "Q4") {
-      setSubdata(Q4);
+    switch (value) {
+      case "Q1":
+        setSubdata(Q1);
+        break;
+      case "Q2":
+        setSubdata(Q2);
+        break;
+      case "Q3":
+        setSubdata(Q3);
+        break;
+      case "Q4":
+        setSubdata(Q4);
+        break;
+      default:
+        setSubdata([]);
     }
   };
   return (
@@ -46,7 +51,20 @@ const Tablecomp = () => {
                     }}
                     key={index}
                   >
-                    {value.time}
+                    <div
+                      style={{
+                        display: "flex",
+                        gap: "1px",
+                        alignItems: "center",
+                      }}
+                    >
+                      {value.time}{" "}
+                      {click && id === value.time ? (
+                        <AiOutlineArrowLeft />
+                      ) : (
+                        <AiOutlineArrowRight />
+                      )}
+                    </div>
                   </Th>
                   {click && id === value.time && (
                     <>
@@ -83,7 +101,9 @@ const Tablecomp = () => {
                       {subdata?.map((value: any, index: any) => {
                         return (
                           <>
-                            <Td className="col" key={index}>{value.indicators[0].value}</Td>
+                            <Td className="col" key={index}>
+                              {value.indicators[0].value}
+                            </Td>
                           </>
                         );
                       })}
@@ -104,7 +124,9 @@ const Tablecomp = () => {
                       {subdata?.map((value: any, index: any) => {
                         return (
                           <>
-                            <Td className="col" key={index}>{value.indicators[1].value}</Td>
+                            <Td className="col" key={index}>
+                              {value.indicators[1].value}
+                            </Td>
                           </>
                         );
                       })}

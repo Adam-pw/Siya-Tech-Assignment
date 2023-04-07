@@ -3,9 +3,10 @@
 * To run the website first install all the packages `npm install`
 * Then start the server through `npm start`
 
-You can visit the website here also hosted on vercel 
-And you can also see the Github Repository form here 
+And you can also see the Github Repository form here `https://github.com/Adam-pw/Siya-Tech-Assignment.git`
 
+### Note :
+* The data provided for the assignment was incomplete and lacked proper refinement. As a result, I created my own metadata to make sense of the available information. However, the code I wrote may contain some redundancy that could be eliminated if more refined data with proper IDs for each section and consistent formatting will be provided.
 
 
 
