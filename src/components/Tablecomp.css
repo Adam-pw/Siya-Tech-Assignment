@@ -1,0 +1,13 @@
+.main {
+  margin: 2rem;
+}
+.table {
+  border: 8px solid #00dece;
+}
+.head {
+  background-color: #00dece;
+  color: white;
+}
+.col{
+  background-color: #e5e7ea;
+}
